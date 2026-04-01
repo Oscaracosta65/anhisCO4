@@ -384,11 +384,11 @@ $rowsBonusBall = ($nodCurrentBonusBall === $nodCurrentMain) ? $rowsMain : leFetc
 
 foreach ($rowsMain as $idx => $row) {
     $balls = [
-        trim((string) ($row['first'] ?? '')),
-        trim((string) ($row['second'] ?? '')),
-        trim((string) ($row['third'] ?? '')),
-        trim((string) ($row['fourth'] ?? '')),
-        trim((string) ($row['fifth'] ?? '')),
+        lePad2(trim((string) ($row['first'] ?? ''))),
+        lePad2(trim((string) ($row['second'] ?? ''))),
+        lePad2(trim((string) ($row['third'] ?? ''))),
+        lePad2(trim((string) ($row['fourth'] ?? ''))),
+        lePad2(trim((string) ($row['fifth'] ?? ''))),
     ];
 
     foreach ($balls as $ball) {
@@ -405,7 +405,7 @@ foreach ($rowsMain as $idx => $row) {
 }
 
 foreach ($rowsBonusBall as $idx => $row) {
-    $ball = trim((string) ($row['sixth'] ?? ''));
+    $ball = lePad2(trim((string) ($row['sixth'] ?? '')));
 
     if ($ball === '' || !isset($bonusBallCounts[$ball])) {
         continue;
@@ -479,7 +479,7 @@ $window300 = leFetchRecentDraws($db, (string) $dbCol, $gameId, 300);
 
 foreach ($window50 as $row) {
     foreach (['first', 'second', 'third', 'fourth', 'fifth'] as $col) {
-        $ball = trim((string) ($row[$col] ?? ''));
+        $ball = lePad2(trim((string) ($row[$col] ?? '')));
 
         if ($ball !== '' && isset($counts50[$ball])) {
             $counts50[$ball]++;
@@ -489,7 +489,7 @@ foreach ($window50 as $row) {
 
 foreach ($window300 as $row) {
     foreach (['first', 'second', 'third', 'fourth', 'fifth'] as $col) {
-        $ball = trim((string) ($row[$col] ?? ''));
+        $ball = lePad2(trim((string) ($row[$col] ?? '')));
 
         if ($ball !== '' && isset($counts300[$ball])) {
             $counts300[$ball]++;
