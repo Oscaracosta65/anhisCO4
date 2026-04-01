@@ -1625,6 +1625,7 @@ table.skai-table tbody tr:hover{
             <a class="skai-mini-link" href="/picking-winning-numbers/artificial-intelligence/skip-and-hit-analysis?game_id=<?php echo rawurlencode($gameId); ?>">Skip &amp; Hit Analysis</a>
             <a class="skai-mini-link" href="/picking-winning-numbers/artificial-intelligence/markov-chain-monte-carlo-mcmc-analysis?game_id=<?php echo rawurlencode($gameId); ?>">MCMC Markov Analysis</a>
             <a class="skai-mini-link" href="/all-lottery-heatmaps?gameId=<?php echo rawurlencode($gameId); ?>">Heatmap Analysis</a>
+            <a class="skai-mini-link" href="/lottery-archives-pick6?gId=<?php echo rawurlencode($gameId); ?>&amp;stateName=<?php echo rawurlencode((string) $stateName); ?>&amp;gName=<?php echo rawurlencode((string) $gName); ?>&amp;sTn=<?php echo rawurlencode(strtolower((string) $stateAbrev)); ?>">Lottery Archives</a>
           </div>
         </div>
 
