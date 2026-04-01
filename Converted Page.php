@@ -207,6 +207,7 @@ function leFindRepeatedFromLatest(array $latestBalls, array $previousRows): arra
             trim((string) ($row['third'] ?? '')),
             trim((string) ($row['fourth'] ?? '')),
             trim((string) ($row['fifth'] ?? '')),
+            trim((string) ($row['sixth'] ?? '')),
         ];
 
         foreach ($latestBalls as $ball) {
